@@ -1,0 +1,112 @@
+.header {
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.contact-info span {
+    margin-right: 10px; /* Giảm khoảng cách giữa các thông tin liên hệ */
+}
+
+.social-icons a {
+    margin-left: 5px; /* Giảm khoảng cách giữa các biểu tượng xã hội */
+    color: #333;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 5px; /* Giảm khoảng cách giữa logo và tiêu đề */
+    width: 80px; /* Tăng chiều rộng của logo */
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn các mục điều hướng xuống hàng */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 30px; /* Tăng khoảng cách giữa các mục điều hướng */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; /* Tăng kích thước phông chữ lên 18px */
+    transition: color 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho màu */
+}
+
+.nav-menu a:hover {
+    color: #007BFF; /* Thay đổi màu khi di chuột vào */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f1f1f1;
+        z-index: 1000;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2em;
+    }
+
+    .nav-menu a {
+        font-size: 16px; /* Điều chỉnh kích thước phông chữ khi ở chế độ di động */
+    }
+}
